@@ -1,0 +1,137 @@
+/* Basic Styling */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+.App {
+  text-align: center;
+  height: 200vh; /* Ensure enough space for scrolling */
+  background-color: #676565;
+}
+
+/* Navbar styling */
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: #333;
+  padding: 10px 0;
+  z-index: 1000;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-links li {
+  margin: 0 15px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+}
+
+.nav-links a:hover {
+  color: #ffcc00;
+}
+
+/* Car container stays centered */
+.car-container {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+}
+
+/* Style the car image */
+.car {
+  width: 250px; /* Car size */
+  transition: transform 0.2s ease-out;
+}
+
+/* Space to scroll */
+.spacer {
+  height: 1400px; /* Extra height for scrolling */
+}
+
+/* Parking Area */
+.parking-area {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap; /* Allow multiple lines of parking slots */
+  gap: 60px; /* Space between slots */
+  background-color: #676565;
+  height: 600px;
+  position: relative;
+  z-index: 1;
+}
+
+/* Parking slot with two lines */
+.parking-slot {
+  position: relative;
+  width: 400px; /* Width of each parking slot */
+  height: 400px; /* Height of parking slot */
+  display: flex;
+  justify-content: space-between;
+}
+.center-slot {
+  position: relative;
+  width: 280px; /* Adjust to fit car width */
+  height: 400px; /* Same height as the others */
+  display: flex;
+  justify-content: space-between;
+}
+
+/* White lines for parking slot */
+.line {
+  width: 15px;
+  height: 100%;
+  background-color: white;
+}
+
+/* Gear indicator at the bottom */
+.gear-indicator {
+  position: absolute;
+  bottom: 10px;
+  display: flex;
+  justify-content: space-evenly;
+  width: 100px;
+  background-color: #333333;
+  border-radius: 20px;
+  padding: 5px 10px;
+}
+
+.gear-indicator span {
+  color: white;
+  font-weight: bold;
+}
+
+/* Road styling */
+.road {
+  position: fixed;
+  top: 0;
+  left: 50%;
+  width: 20px;
+  height: 100%;
+  background-color: transparent;
+  z-index: 0; /* Behind the car */
+  transform: translateX(-50%);
+}
+
+/* Road stripe styling */
+.road-stripe {
+  position: absolute;
+  width: 20px;
+  height: 100px;
+  background-color: white;
+  left: 0;
+}
